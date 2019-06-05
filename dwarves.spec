@@ -4,7 +4,7 @@
 #
 Name     : dwarves
 Version  : 1.12
-Release  : 1
+Release  : 2
 URL      : https://git.kernel.org/pub/scm/devel/pahole/pahole.git/snapshot/pahole-1.12.tar.gz
 Source0  : https://git.kernel.org/pub/scm/devel/pahole/pahole.git/snapshot/pahole-1.12.tar.gz
 Summary  : Debugging Information Manipulation Tools
