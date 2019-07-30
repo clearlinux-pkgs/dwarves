@@ -4,18 +4,19 @@
 #
 Name     : dwarves
 Version  : 1.12
-Release  : 2
+Release  : 3
 URL      : https://git.kernel.org/pub/scm/devel/pahole/pahole.git/snapshot/pahole-1.12.tar.gz
 Source0  : https://git.kernel.org/pub/scm/devel/pahole/pahole.git/snapshot/pahole-1.12.tar.gz
 Summary  : Debugging Information Manipulation Tools
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: dwarves-bin
-Requires: dwarves-lib
-Requires: dwarves-license
-Requires: dwarves-data
-Requires: dwarves-man
+Requires: dwarves-bin = %{version}-%{release}
+Requires: dwarves-data = %{version}-%{release}
+Requires: dwarves-lib = %{version}-%{release}
+Requires: dwarves-license = %{version}-%{release}
+Requires: dwarves-man = %{version}-%{release}
 BuildRequires : buildreq-cmake
+BuildRequires : elfutils-staticdev
 BuildRequires : pkgconfig(libdw)
 BuildRequires : zlib-dev
 
@@ -43,9 +44,8 @@ functions, inlines, decisions made by the compiler about inlining, etc.
 %package bin
 Summary: bin components for the dwarves package.
 Group: Binaries
-Requires: dwarves-data
-Requires: dwarves-license
-Requires: dwarves-man
+Requires: dwarves-data = %{version}-%{release}
+Requires: dwarves-license = %{version}-%{release}
 
 %description bin
 bin components for the dwarves package.
@@ -62,10 +62,11 @@ data components for the dwarves package.
 %package dev
 Summary: dev components for the dwarves package.
 Group: Development
-Requires: dwarves-lib
-Requires: dwarves-bin
-Requires: dwarves-data
-Provides: dwarves-devel
+Requires: dwarves-lib = %{version}-%{release}
+Requires: dwarves-bin = %{version}-%{release}
+Requires: dwarves-data = %{version}-%{release}
+Provides: dwarves-devel = %{version}-%{release}
+Requires: dwarves = %{version}-%{release}
 
 %description dev
 dev components for the dwarves package.
@@ -74,8 +75,8 @@ dev components for the dwarves package.
 %package lib
 Summary: lib components for the dwarves package.
 Group: Libraries
-Requires: dwarves-data
-Requires: dwarves-license
+Requires: dwarves-data = %{version}-%{release}
+Requires: dwarves-license = %{version}-%{release}
 
 %description lib
 lib components for the dwarves package.
@@ -104,19 +105,27 @@ man components for the dwarves package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1534461935
-mkdir clr-build
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1564494089
+mkdir -p clr-build
 pushd clr-build
+export GCC_IGNORE_WERROR=1
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %cmake ..
-make  %{?_smp_mflags}
+make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1534461935
+export SOURCE_DATE_EPOCH=1564494089
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/dwarves
-cp COPYING %{buildroot}/usr/share/doc/dwarves/COPYING
+mkdir -p %{buildroot}/usr/share/package-licenses/dwarves
+cp COPYING %{buildroot}/usr/share/package-licenses/dwarves/COPYING
 pushd clr-build
 %make_install
 popd
@@ -170,9 +179,9 @@ popd
 /usr/lib64/libdwarves_reorganize.so.1.0.0
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/dwarves/COPYING
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/dwarves/COPYING
 
 %files man
-%defattr(-,root,root,-)
+%defattr(0644,root,root,0755)
 /usr/share/man/man1/pahole.1
