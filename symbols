@@ -1,6 +1,8 @@
 libdwarves.so.1:__gobuffer__delete
+libdwarves.so.1:__strlist__add
 libdwarves.so.1:__tag__has_type_loop
 libdwarves.so.1:__tag__id_not_found_fprintf
+libdwarves.so.1:__type__init
 libdwarves.so.1:base_type__name
 libdwarves.so.1:base_type__name_to_size
 libdwarves.so.1:base_type_name_to_size_table__init
@@ -190,12 +192,15 @@ libdwarves.so.1:btf_dump__free
 libdwarves.so.1:btf_dump__new
 libdwarves.so.1:btf_elf__add_array
 libdwarves.so.1:btf_elf__add_base_type
+libdwarves.so.1:btf_elf__add_datasec_type
 libdwarves.so.1:btf_elf__add_enum
 libdwarves.so.1:btf_elf__add_enum_val
 libdwarves.so.1:btf_elf__add_func_proto
 libdwarves.so.1:btf_elf__add_member
 libdwarves.so.1:btf_elf__add_ref_type
 libdwarves.so.1:btf_elf__add_struct
+libdwarves.so.1:btf_elf__add_var_secinfo
+libdwarves.so.1:btf_elf__add_var_type
 libdwarves.so.1:btf_elf__delete
 libdwarves.so.1:btf_elf__encode
 libdwarves.so.1:btf_elf__get32
@@ -262,6 +267,7 @@ libdwarves.so.1:cu__encode_btf
 libdwarves.so.1:cu__encode_ctf
 libdwarves.so.1:cu__find_base_type_by_name
 libdwarves.so.1:cu__find_base_type_by_sname_and_size
+libdwarves.so.1:cu__find_enumeration_by_name
 libdwarves.so.1:cu__find_enumeration_by_sname_and_size
 libdwarves.so.1:cu__find_first_typedef_of_type
 libdwarves.so.1:cu__find_function_at_addr
@@ -286,6 +292,7 @@ libdwarves.so.1:cus__find_cu_by_name
 libdwarves.so.1:cus__find_function_at_addr
 libdwarves.so.1:cus__find_struct_by_name
 libdwarves.so.1:cus__find_struct_or_union_by_name
+libdwarves.so.1:cus__find_type_by_name
 libdwarves.so.1:cus__for_each_cu
 libdwarves.so.1:cus__fprintf_load_files_err
 libdwarves.so.1:cus__load_dir
@@ -302,8 +309,12 @@ libdwarves.so.1:elf_section_by_name
 libdwarves.so.1:elf_symtab__delete
 libdwarves.so.1:elf_symtab__new
 libdwarves.so.1:enumeration__add
+libdwarves.so.1:enumeration__calc_prefix
 libdwarves.so.1:enumeration__delete
 libdwarves.so.1:enumeration__fprintf
+libdwarves.so.1:enumeration__prefix
+libdwarves.so.1:enumeration__prefix_len
+libdwarves.so.1:enumerations__calc_prefix
 libdwarves.so.1:ftype__add_parameter
 libdwarves.so.1:ftype__delete
 libdwarves.so.1:ftype__fprintf
@@ -383,10 +394,13 @@ libdwarves.so.1:strlist__has_entry
 libdwarves.so.1:strlist__load
 libdwarves.so.1:strlist__new
 libdwarves.so.1:strlist__remove
+libdwarves.so.1:strlwr
 libdwarves.so.1:tag__delete
 libdwarves.so.1:tag__follow_typedef
 libdwarves.so.1:tag__fprintf
 libdwarves.so.1:tag__fprintf_decl_info
+libdwarves.so.1:tag__is_array
+libdwarves.so.1:tag__is_base_type
 libdwarves.so.1:tag__name
 libdwarves.so.1:tag__not_found_die
 libdwarves.so.1:tag__nr_cachelines
