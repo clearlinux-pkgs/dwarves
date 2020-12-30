@@ -1,5 +1,5 @@
 PKG_NAME := dwarves
-URL = https://git.kernel.org/pub/scm/devel/pahole/pahole.git/snapshot/pahole-1.18.tar.gz
-ARCHIVES = https://github.com/libbpf/libbpf/archive/e5dbc1a96f138e7c47324a65269adff0ca0f4f6e/libbpf-0.0.6-80-ge5dbc1a.tar.gz lib/bpf
+URL = https://git.kernel.org/pub/scm/devel/pahole/pahole.git/snapshot/pahole-1.19.tar.gz
+ARCHIVES = https://github.com/libbpf/libbpf/archive/5af3d86b5a2c5fecdc3ab83822d083edd32b4396/libbpf-0.2-12-g5af3d86.tar.gz lib/bpf
 
 include ../common/Makefile.common
