@@ -383,6 +383,7 @@ libdwarves.so.1:dwarves__fprintf_init
 libdwarves.so.1:dwarves__init
 libdwarves.so.1:dwarves_print_numeric_version
 libdwarves.so.1:dwarves_print_version
+libdwarves.so.1:elf_section_by_idx
 libdwarves.so.1:elf_section_by_name
 libdwarves.so.1:elf_symtab__delete
 libdwarves.so.1:elf_symtab__new
