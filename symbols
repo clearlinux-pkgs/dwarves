@@ -220,6 +220,7 @@ libdwarves.so.1:btf__add_datasec_var_info
 libdwarves.so.1:btf__add_enum
 libdwarves.so.1:btf__add_enum_value
 libdwarves.so.1:btf__add_field
+libdwarves.so.1:btf__add_float
 libdwarves.so.1:btf__add_func
 libdwarves.so.1:btf__add_func_param
 libdwarves.so.1:btf__add_func_proto
@@ -234,6 +235,7 @@ libdwarves.so.1:btf__add_union
 libdwarves.so.1:btf__add_var
 libdwarves.so.1:btf__add_volatile
 libdwarves.so.1:btf__align_of
+libdwarves.so.1:btf__base_btf
 libdwarves.so.1:btf__dedup
 libdwarves.so.1:btf__endianness
 libdwarves.so.1:btf__fd
@@ -296,6 +298,7 @@ libdwarves.so.1:btf_ext__line_info_rec_size
 libdwarves.so.1:btf_ext__new
 libdwarves.so.1:btf_ext__reloc_func_info
 libdwarves.so.1:btf_ext__reloc_line_info
+libdwarves.so.1:btf_get_from_fd
 libdwarves.so.1:class__add_vtable_entry
 libdwarves.so.1:class__clone
 libdwarves.so.1:class__delete
@@ -428,6 +431,7 @@ libdwarves.so.1:lexblock__add_tag
 libdwarves.so.1:lexblock__add_variable
 libdwarves.so.1:lexblock__delete
 libdwarves.so.1:lexblock__fprintf
+libdwarves.so.1:libbpf__bpf_prog_load
 libdwarves.so.1:libbpf__load_raw_btf
 libdwarves.so.1:libbpf_attach_type_by_name
 libdwarves.so.1:libbpf_find_kernel_btf
@@ -464,6 +468,7 @@ libdwarves.so.1:rb_prev
 libdwarves.so.1:rb_replace_node
 libdwarves.so.1:ring_buffer__add
 libdwarves.so.1:ring_buffer__consume
+libdwarves.so.1:ring_buffer__epoll_fd
 libdwarves.so.1:ring_buffer__free
 libdwarves.so.1:ring_buffer__new
 libdwarves.so.1:ring_buffer__poll
@@ -505,10 +510,12 @@ libdwarves.so.1:variable__name
 libdwarves.so.1:variable__scope
 libdwarves.so.1:variable__scope_str
 libdwarves.so.1:variable__type_name
+libdwarves.so.1:xsk_setup_xdp_prog
 libdwarves.so.1:xsk_socket__create
 libdwarves.so.1:xsk_socket__create_shared
 libdwarves.so.1:xsk_socket__delete
 libdwarves.so.1:xsk_socket__fd
+libdwarves.so.1:xsk_socket__update_xskmap
 libdwarves.so.1:xsk_umem__create
 libdwarves.so.1:xsk_umem__create_v0_0_2
 libdwarves.so.1:xsk_umem__create_v0_0_4
