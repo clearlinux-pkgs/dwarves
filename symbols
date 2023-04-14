@@ -7,6 +7,7 @@ libdwarves.so.1:__tag__has_type_loop
 libdwarves.so.1:__tag__id_not_found_fprintf
 libdwarves.so.1:__type__init
 libdwarves.so.1:__zfree
+libdwarves.so.1:base_type__language_defined
 libdwarves.so.1:base_type__name
 libdwarves.so.1:base_type__name_to_size
 libdwarves.so.1:bpf_btf_get_fd_by_id
@@ -291,9 +292,6 @@ libdwarves.so.1:btf_encoder__delete
 libdwarves.so.1:btf_encoder__encode
 libdwarves.so.1:btf_encoder__encode_cu
 libdwarves.so.1:btf_encoder__new
-libdwarves.so.1:btf_encoders__add
-libdwarves.so.1:btf_encoders__first
-libdwarves.so.1:btf_encoders__next
 libdwarves.so.1:btf_ext__free
 libdwarves.so.1:btf_ext__get_raw_data
 libdwarves.so.1:btf_ext__new
@@ -419,6 +417,7 @@ libdwarves.so.1:function__delete
 libdwarves.so.1:function__fprintf_stats
 libdwarves.so.1:function__name
 libdwarves.so.1:function__prototype
+libdwarves.so.1:function__prototype_conf
 libdwarves.so.1:get_kernel_version
 libdwarves.so.1:gobuffer__add
 libdwarves.so.1:gobuffer__allocate
