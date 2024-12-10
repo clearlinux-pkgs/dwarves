@@ -291,6 +291,7 @@ libdwarves.so.1:btf_dump__new
 libdwarves.so.1:btf_encoder__add_encoder
 libdwarves.so.1:btf_encoder__btf
 libdwarves.so.1:btf_encoder__delete
+libdwarves.so.1:btf_encoder__delete_func
 libdwarves.so.1:btf_encoder__encode
 libdwarves.so.1:btf_encoder__encode_cu
 libdwarves.so.1:btf_encoder__new
@@ -313,6 +314,8 @@ libdwarves.so.1:class__delete
 libdwarves.so.1:class__find_bit_hole
 libdwarves.so.1:class__find_holes
 libdwarves.so.1:class__fprintf
+libdwarves.so.1:class__has_embedded_flexible_array
+libdwarves.so.1:class__has_flexible_array
 libdwarves.so.1:class__has_hole_ge
 libdwarves.so.1:class__infer_packed_attributes
 libdwarves.so.1:class_member__delete
@@ -371,6 +374,8 @@ libdwarves.so.1:cu__table_add_tag
 libdwarves.so.1:cu__table_add_tag_with_id
 libdwarves.so.1:cu__table_nullify_type_entry
 libdwarves.so.1:cu__tag
+libdwarves.so.1:cu__tag_alloc
+libdwarves.so.1:cu__tag_free
 libdwarves.so.1:cu__type
 libdwarves.so.1:cu__zalloc
 libdwarves.so.1:cus__add
@@ -413,7 +418,11 @@ libdwarves.so.1:enumeration__add
 libdwarves.so.1:enumeration__delete
 libdwarves.so.1:enumeration__fprintf
 libdwarves.so.1:enumerations__calc_prefix
+libdwarves.so.1:formal_parameter_pack__add
+libdwarves.so.1:formal_parameter_pack__delete
 libdwarves.so.1:ftype__add_parameter
+libdwarves.so.1:ftype__add_template_type_param
+libdwarves.so.1:ftype__add_template_value_param
 libdwarves.so.1:ftype__delete
 libdwarves.so.1:ftype__fprintf
 libdwarves.so.1:ftype__fprintf_parms
@@ -443,7 +452,12 @@ libdwarves.so.1:hashmap__insert
 libdwarves.so.1:hashmap__new
 libdwarves.so.1:hashmap__size
 libdwarves.so.1:kernel_supports
+libdwarves.so.1:lang__int2str
 libdwarves.so.1:lang__str2int
+libdwarves.so.1:languages__cu_filtered
+libdwarves.so.1:languages__in
+libdwarves.so.1:languages__init
+libdwarves.so.1:languages__parse
 libdwarves.so.1:lexblock__add_inline_expansion
 libdwarves.so.1:lexblock__add_label
 libdwarves.so.1:lexblock__add_lexblock
@@ -539,7 +553,11 @@ libdwarves.so.1:tag__not_found_die
 libdwarves.so.1:tag__nr_cachelines
 libdwarves.so.1:tag__size
 libdwarves.so.1:tag__strip_typedefs_and_modifiers
+libdwarves.so.1:template_parameter_pack__add
+libdwarves.so.1:template_parameter_pack__delete
 libdwarves.so.1:type__add_member
+libdwarves.so.1:type__add_template_type_param
+libdwarves.so.1:type__add_template_value_param
 libdwarves.so.1:type__check_structs_at_unnatural_alignments
 libdwarves.so.1:type__delete
 libdwarves.so.1:type__find_first_biggest_size_base_type_member
@@ -555,6 +573,8 @@ libdwarves.so.1:variable__name
 libdwarves.so.1:variable__scope
 libdwarves.so.1:variable__scope_str
 libdwarves.so.1:variable__type_name
+libdwarves.so.1:vmlinux_path__btf_filename
+libdwarves.so.1:vmlinux_path__find_running_kernel
 libdwarves.so.1:zalloc
 libdwarves_emit.so.1:ftype__emit_definitions
 libdwarves_emit.so.1:type__emit
