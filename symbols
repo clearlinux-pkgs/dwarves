@@ -288,10 +288,7 @@ libdwarves.so.1:btf_dump__dump_type_data
 libdwarves.so.1:btf_dump__emit_type_decl
 libdwarves.so.1:btf_dump__free
 libdwarves.so.1:btf_dump__new
-libdwarves.so.1:btf_encoder__add_encoder
-libdwarves.so.1:btf_encoder__btf
 libdwarves.so.1:btf_encoder__delete
-libdwarves.so.1:btf_encoder__delete_func
 libdwarves.so.1:btf_encoder__encode
 libdwarves.so.1:btf_encoder__encode_cu
 libdwarves.so.1:btf_encoder__new
@@ -390,7 +387,6 @@ libdwarves.so.1:cus__find_type_by_name
 libdwarves.so.1:cus__for_each_cu
 libdwarves.so.1:cus__fprintf_load_files_err
 libdwarves.so.1:cus__fprintf_ptr_table_stats_csv_header
-libdwarves.so.1:cus__get_next_processable_cu
 libdwarves.so.1:cus__load_dir
 libdwarves.so.1:cus__load_file
 libdwarves.so.1:cus__load_files
@@ -400,7 +396,6 @@ libdwarves.so.1:cus__nr_entries
 libdwarves.so.1:cus__print_error_msg
 libdwarves.so.1:cus__priv
 libdwarves.so.1:cus__remove
-libdwarves.so.1:cus__set_cu_state
 libdwarves.so.1:cus__set_loader_exit
 libdwarves.so.1:cus__set_priv
 libdwarves.so.1:cus__unlock
@@ -410,6 +405,7 @@ libdwarves.so.1:dwarves__init
 libdwarves.so.1:dwarves__resolve_cacheline_size
 libdwarves.so.1:dwarves_print_numeric_version
 libdwarves.so.1:dwarves_print_version
+libdwarves.so.1:elf_functions__new
 libdwarves.so.1:elf_section_by_idx
 libdwarves.so.1:elf_section_by_name
 libdwarves.so.1:elf_symtab__delete
