@@ -569,6 +569,7 @@ libdwarves.so.1:variable__name
 libdwarves.so.1:variable__scope
 libdwarves.so.1:variable__scope_str
 libdwarves.so.1:variable__type_name
+libdwarves.so.1:variable_in_sec
 libdwarves.so.1:vmlinux_path__btf_filename
 libdwarves.so.1:vmlinux_path__find_running_kernel
 libdwarves.so.1:zalloc
